@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gerador de Tarefas</h1>
+            <p>Organize suas atividades diárias</p>
+        </header>
+
+        <form class="task-form" id="taskForm">
+        
+            <input 
+                type="text" 
+                class="task-input" 
+                id="taskInput" 
+                placeholder="Adicione uma nova tarefa..."
+                required
+            >
+            <button type="submit" class="add-btn">Adicionar</button>
+        </form>
+
+        <div class="task-filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendentes</button>
+            <button class="filter-btn" data-filter="completed">Concluídas</button>
+        </div>
+
+        <ul class="task-list" id="taskList"></ul>
+
+        <div class="empty-state" id="emptyState">
+            <h3>Sua lista de tarefas está vazia</h3>
+            <p>Adicione novas tarefas usando o campo acima</p>
+        </div>
+
+        <div class="task-stats" id="taskStats">
+            <span id="totalCount">0</span> tarefas totais • 
+            <span id="pendingCount">0</span> pendentes • 
+            <span id="completedCount">0</span> concluídas
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
